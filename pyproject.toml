@@ -1,0 +1,24 @@
+[project]
+name = "business-news-rag"
+version = "0.1.0"
+description = "Учебный RAG по деловым и экономическим новостям (Gazeta.ru): TF-IDF + ответ с источниками"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit",
+    "scikit-learn",
+    "scipy",
+    "pytest",
+]
+
+# Зависимости только для пересборки корпуса из HuggingFace.
+# Для обычного запуска (build_index + UI) НЕ нужны — datasets.json уже в репозитории.
+# Установка: uv sync --extra data
+[project.optional-dependencies]
+data = ["datasets"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
