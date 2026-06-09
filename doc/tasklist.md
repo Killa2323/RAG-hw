@@ -104,7 +104,7 @@ uv run python -c "import json; d=json.load(open('data/raw/datasets.json', encodi
 ## Итерация 8 — Тесты и README
 
 - [x] `tests/test_chunking.py`, `tests/test_retrieval.py` — 11 тестов
-- [x] Корневой `README.md` — uv, build_index, streamlit, demo-вопросы, скриншоты
+- [x] Корневой `README.md` — uv, build_index, streamlit, demo-вопросы, demo-логи
 
 **Проверка:** `uv run pytest tests/ -v` → 11 passed
 
